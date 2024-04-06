@@ -6,7 +6,45 @@
     <title>zen</title>
   </head>
   <body>
-    <header>Шапка сайта</header>
+    <header class="header">
+      <div class="header__wrapper">
+        <button class="header__logo" type="button" id="logo">
+          <img src="./assets/icons/logo.svg" alt="ZEN" />
+        </button>
+        <ul class="menu" id="menu">
+          <li class="menu__items">
+            <a href="#download">Download</a>
+          </li>
+          <li class="menu__items">
+            <a href="#warranty">Warranty</a>
+          </li>
+          <li class="menu__items">
+            <a href="#care">Care</a>
+          </li>
+          <li class="menu__items">
+            <a href="#cashback">Cashback</a>
+          </li>
+          <li class="menu__items">
+            <a href="#clients">Clients</a>
+          </li>
+        </ul>
+        <div class="header__options">
+          <!--lang-->
+          <select name="header__lang" id="lang">
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+          </select>
+          <!--theme-->
+          <button class="header__theme" id="theme">
+            <img src="./assets/icons/moon.svg" alt="Moon" />
+          </button>
+          <!--burger-->
+          <button class="header__burger" type="button" id="burger">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
     <!--секция 1-->
     <section class="download" id="download">
       <div class="download__wrapper">
