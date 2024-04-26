@@ -28,3 +28,7 @@ h3,
 p {
   all: unset;
 }
+
+img {
+  width: 100%;
+}
