@@ -2,22 +2,27 @@
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  box-sizing: border-box;
 }
 
-ul {
+ul,
+ol {
   list-style: none;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 button,
 input,
 select {
-  all: unset;
+  font: inherit;
+  appearance: none;
+  color: inherit;
+  background: none;
+  border: none;
   padding-block: 0;
   padding-inline: 0;
 }
@@ -26,7 +31,8 @@ h1,
 h2,
 h3,
 p {
-  all: unset;
+  font-size: inherit;
+  font-weight: 400;
 }
 
 img {
