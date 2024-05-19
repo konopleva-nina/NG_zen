@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>zen</title>
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/menu.css" />
     <link rel="stylesheet" href="css/burger.css" />
+    <link rel="stylesheet" href="css/section1.css" />
   </head>
   <body>
     <header class="header">
@@ -16,7 +18,7 @@
           <img src="./assets/icons/logo.svg" alt="ZEN" />
         </button>
         <nav class="header__nav">
-          <ul class="menu" id="menu">
+          <ul class="menu active" id="menu">
             <li class="menu__item">
               <a href="#download">Download</a>
             </li>
@@ -48,7 +50,7 @@
             <img src="./assets/icons/moon.svg" alt="Moon" />
           </button>
           <!--burger-->
-          <button class="header__burger active" type="button" id="burger">
+          <button class="header__burger" type="button" id="burger">
             <span></span>
           </button>
         </div>
@@ -238,9 +240,11 @@
           <h3 class="column__title">Follow us</h3>
           <ul class="column__list">
             <li class="column__item">
-              <a href="https://example.com">
-                <img src="./assets/icons/link.svg" alt="Linkedin" />
-              </a>
+              <div class="linkedin">
+                <a href="https://example.com">
+                  <img src="./assets/icons/link.svg" alt="Linkedin" />
+                </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -254,9 +258,11 @@
         </div>
       </div>
       <div class="footer__info">
-        <a class="footer__logo" href="https://example.com">
-          <img src="./assets/icons/logo2.svg" alt="logo" />
-        </a>
+        <div class="footer__logo">
+          <a class="footer__logo" href="https://example.com">
+            <img src="./assets/icons/logo2.svg" alt="logo" />
+          </a>
+        </div>
         <p class="footer__copy">
           ZEN is a licensed financial institution under the supervision of the
           Central Bank of Lithuania approved by European Banking Authority for
@@ -275,9 +281,11 @@
         <p class="footer__copy">
           Sales Office: ul. Emilii Plater 53, 00-113 Warsaw, Poland.
         </p>
-        <a class="footer__dev" href="https://example.com">
-          <img src="./assets/icons/developer.svg" alt="developer" />
-        </a>
+        <div class="footer__dev">
+          <a href="https://example.com">
+            <img src="./assets/icons/developer.svg" alt="developer" />
+          </a>
+        </div>
       </div>
     </footer>
     <!-- модальное окно -->
