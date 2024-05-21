@@ -1,11 +1,13 @@
 /* section5 */
 
 .clients__wrapper {
-  padding: 30px 15px 0 15px;
-  column-count: 2;
+  padding: 30px 15px;
+}
+
+.clients__brands {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
 
-.clients__brand {
-  margin-bottom: 30px;
-}
+/* .clients__brand {} */
