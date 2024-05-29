@@ -10,16 +10,15 @@
   gap: 30px;
 }
 
-.warranty__text-block {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+/* .warranty__text-block {} */
 
 .warranty__title {
   font-size: 26px;
   font-weight: 700;
-  margin-bottom: 10px;
+}
+
+.warranty__copy {
+  margin-top: 20px;
 }
 
 .warranty__imag-block {
