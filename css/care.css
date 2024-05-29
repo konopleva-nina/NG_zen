@@ -10,16 +10,19 @@
   gap: 30px;
 }
 
-.care__text-block {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+/* .care__text-block {} */
 
 .care__title {
   font-size: 26px;
   font-weight: 700;
-  margin-bottom: 10px;
+}
+
+.care__copy:first-of-type {
+  margin-top: 20px;
+}
+
+.care__copy {
+  margin-top: 10px;
 }
 
 .care__imag-block {
