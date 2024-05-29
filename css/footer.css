@@ -25,6 +25,7 @@ footer {
 
 .footer__copy {
   margin-bottom: 10px;
+  font-size: 12px;
 }
 
 .footer__dev {

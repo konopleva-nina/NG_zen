@@ -9,6 +9,7 @@
 
 .column__item {
   margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .column__item:last-child {
