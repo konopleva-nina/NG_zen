@@ -18,13 +18,15 @@ a {
 button,
 input,
 select {
-  font: inherit;
+  font-family: inherit;
+  font-size: inherit;
   appearance: none;
   color: inherit;
   background: none;
   border: none;
   padding-block: 0;
   padding-inline: 0;
+  outline: none;
 }
 
 h1,
@@ -32,9 +34,4 @@ h2,
 h3,
 p {
   font-size: inherit;
-  font-weight: 400;
-}
-
-img {
-  width: 100%;
 }
