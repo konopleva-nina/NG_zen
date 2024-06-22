@@ -15,8 +15,11 @@
 }
 
 .modal__body {
+  width: calc(100vw - 30px);
   padding: 30px 20px;
   position: relative;
+  display: grid;
+  gap: 20px;
   background: #fff;
   border-radius: 5px;
 }
