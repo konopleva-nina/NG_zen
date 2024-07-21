@@ -1,0 +1,67 @@
+/* cashback */
+
+.cashback {
+  padding: $padding-section-sm;
+  background: var(--bg-color-primery);
+  /* &__wrapper {} */
+
+  /* &__text-block {
+  } */
+
+  &__title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+
+  &__copy:first-of-type {
+    margin-top: 20px;
+  }
+
+  &__copy {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--primary-color);
+  }
+
+  &__button {
+    margin-top: 20px;
+    font-size: 16px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    border: $border-line var(--border-color-primery);
+    border-radius: $gap-large;
+  }
+}
+
+@media (min-width: $viewport-md) {
+  .cashback {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+
+    &__text-block {
+      width: 60vw;
+      text-align: center;
+      display: grid;
+      grid-template-columns: auto;
+    }
+
+    &__title {
+      font-size: 30px;
+    }
+
+    &__copy {
+      font-size: 16px;
+    }
+
+    &__button {
+      width: 30vw;
+      justify-self: center;
+    }
+  }
+}

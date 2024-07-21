@@ -1,0 +1,68 @@
+/* warranty */
+
+.warranty {
+  padding: $padding-section-sm;
+  background: var(--bg-color-primery);
+
+  &__wrapper {
+    @include flex(column, $gap-large);
+  }
+
+  /* &__text-block {} */
+
+  &__title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+
+  &__copy:first-of-type {
+    margin-top: 20px;
+  }
+
+  &__copy {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--primary-color);
+  }
+
+  &__imag-block {
+    height: 72vw;
+    border: $border-line var(--border-color-primery);
+    border-radius: $border-radius;
+    overflow: hidden;
+  }
+
+  &__imag-block img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: $viewport-md) {
+  .warranty {
+    padding: 30px 40px;
+    &__wrapper {
+      @include flex(row-reverse, $gap-large);
+    }
+
+    &__text-block {
+      margin-top: 20px;
+      width: 50vw;
+    }
+
+    &__title {
+      font-size: 30px;
+    }
+
+    &__links {
+      @include flex(row, $gap-small);
+    }
+
+    &__imag-block {
+      width: 50vw;
+      height: 78%;
+    }
+  }
+}
