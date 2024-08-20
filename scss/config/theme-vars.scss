@@ -1,0 +1,31 @@
+.app {
+  &.light {
+    --primary-color: #000;
+    --footer-text-color: #fff;
+
+    --border-color-primery: #aaa;
+    --border-color-secondary: #000;
+
+    --bg-color-primery: #fff;
+    --footer-color: #484848;
+    --bg-modal-color: rgba(0, 0, 0, 0.6);
+
+    --icon-color: #000;
+  }
+}
+
+.app {
+  &.dark {
+    --primary-color: #fff;
+    --footer-text-color: #fff;
+
+    --border-color-primery: #fff;
+    --border-color-secondary: #fff;
+
+    --bg-color-primery: #484848;
+    --footer-color: #484848;
+    --bg-modal-color: rgba(0, 0, 0, 0.6);
+
+    --icon-color: #fff;
+  }
+}

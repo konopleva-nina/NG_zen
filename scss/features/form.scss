@@ -1,0 +1,86 @@
+/*form*/
+.form {
+  display: grid;
+  gap: 15px;
+
+  &__field {
+    height: 30px;
+    position: relative;
+    display: block;
+    border-bottom: $border-line var(--border-color-primery);
+  }
+
+  &__field input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+  }
+
+  &__field input::placeholder {
+    font-size: 16px;
+    color: #aaa;
+  }
+
+  &__field span {
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    bottom: 2px;
+    color: #aaa;
+    z-index: 0;
+  }
+
+  &__field select {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    z-index: 1;
+  }
+
+  &__field img {
+    width: 10px;
+    height: 9px;
+    position: absolute;
+    right: 5px;
+    bottom: 8px;
+  }
+
+  &__checkbox {
+    display: flex;
+    gap: 5px;
+  }
+
+  &__checkbox input::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: $border-line #00a1ff;
+    border-radius: 3px;
+  }
+
+  &__checkbox input:checked::before {
+    background-image: url(../assets/icons/check.svg);
+    background-position: center;
+    background-size: 100%;
+  }
+
+  &__checkbox a {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 0;
+    color: #222;
+    text-decoration: underline;
+  }
+
+  &__submit {
+    font-size: 16px;
+    margin-top: 5px;
+    border: $border-line #222;
+    border-radius: 30px;
+    padding: 10px;
+  }
+}
