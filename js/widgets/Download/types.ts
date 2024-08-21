@@ -1,6 +1,6 @@
-import { TitleData } from '../../ui/Title/types.ts';
-import { ImageData } from '../../ui/Image/types.ts';
-import { LinkData } from '../../ui/Link/types.ts';
+import { TitleData } from '../../ui/Title/types';
+import { ImageData } from '../../ui/Image/types';
+import { LinkData } from '../../ui/Link/types';
 
 export type DownloadData = {
   title: TitleData;
