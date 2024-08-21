@@ -9,5 +9,8 @@
  */
 
 export const Image = (data) => `
-  <img src="${data.source}" alt="${data.description}" />
+  <img
+    src="${data.source}"
+    alt="${data.description}"
+  />
 `;
