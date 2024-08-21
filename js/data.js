@@ -34,7 +34,10 @@ export const data = {
     ],
   },
   download: {
-    title: 'Peaceful shopping mindful money',
+    title: {
+      content: 'Peaceful shopping mindful money',
+      priority: 1,
+    },
     texts: [
       'See how we can help with making your shopping experience and money management more ZEN.',
     ],
@@ -54,7 +57,10 @@ export const data = {
     },
   },
   warranty: {
-    title: '1-year warranty boost',
+    title: {
+      content: '1-year warranty boost',
+      priority: 2,
+    },
     texts: ['ZEN cards have a very neat...', 'When you buy any electronics...'],
     image: {
       source: './assets/imag/basket.jpg',
@@ -62,7 +68,10 @@ export const data = {
     },
   },
   care: {
-    title: 'care',
+    title: {
+      content: 'care',
+      priority: 2,
+    },
     texts: [
       'Shopping online is usually',
       'Until something you buy',
@@ -74,7 +83,10 @@ export const data = {
     },
   },
   cashback: {
-    title: 'and cashback!',
+    title: {
+      content: 'and cashback!',
+      priority: 2,
+    },
     texts: [
       'It saves a little bit of money',
       'We gave it a thought and made',
