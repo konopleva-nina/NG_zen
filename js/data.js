@@ -61,7 +61,10 @@ export const data = {
       content: '1-year warranty boost',
       priority: 2,
     },
-    texts: ['ZEN cards have a very neat...', 'When you buy any electronics...'],
+    texts: [
+      'ZEN cards have a very neat feature that will help you whenever your electronic devices start failing after the standard warranty ends, which is pretty common.',
+      'When you buy any electronics with your ZEN shopping Mastercard, their warranty gets extended by one year. How does it work? It simply does. Automatically.',
+    ],
     image: {
       source: './assets/imag/basket.jpg',
       description: 'Basket with goods',
