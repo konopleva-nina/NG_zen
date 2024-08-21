@@ -4,7 +4,7 @@ import { LinkData } from '../../ui/Link/types';
 
 export type DownloadData = {
   title: TitleData;
-  texts: number[];
+  texts: string[];
   links: LinkData[];
   image: ImageData;
 };
