@@ -6,6 +6,3 @@ const $root = document.querySelector('#root');
 
 $root?.insertAdjacentHTML('beforeend', Download(data.download));
 $root?.insertAdjacentHTML('beforeend', Warranty(data.warranty));
-
-//Добавить в конспект оператор optional chaning
-// insertAdjasmentHtml
