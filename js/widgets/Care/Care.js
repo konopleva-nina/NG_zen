@@ -20,7 +20,7 @@ export const Care = (data) => {
           ${Title(title, 'care__title')}
           ${texts.map((text) => `<p class="care__copy">${text}</p>`).join('')}
         </div>
-        <div class="care__imag-block">
+        <div class="care__image-block">
           ${Image(image)}
         </div>
       </div>
