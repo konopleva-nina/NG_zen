@@ -408,13 +408,13 @@ img {
   width: 150px;
   height: 44px;
 }
-.download__imag-block {
+.download__image-block {
   height: 72vw;
   border: 1px solid var(--border-color-primery);
   border-radius: 20px;
   overflow: hidden;
 }
-.download__imag-block img {
+.download__image-block img {
   display: block;
   height: 100%;
   object-fit: cover;
@@ -441,7 +441,7 @@ img {
     flex-direction: row;
     gap: 15px;
   }
-  .download__imag-block {
+  .download__image-block {
     width: 50vw;
     height: 78%;
   }
@@ -470,13 +470,13 @@ img {
   font-size: 14px;
   color: var(--primary-color);
 }
-.warranty__imag-block {
+.warranty__image-block {
   height: 72vw;
   border: 1px solid var(--border-color-primery);
   border-radius: 20px;
   overflow: hidden;
 }
-.warranty__imag-block img {
+.warranty__image-block img {
   display: block;
   height: 100%;
   object-fit: cover;
@@ -503,7 +503,7 @@ img {
     flex-direction: row;
     gap: 15px;
   }
-  .warranty__imag-block {
+  .warranty__image-block {
     width: 50vw;
     height: 78%;
   }
