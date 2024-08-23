@@ -1,5 +1,5 @@
-import { TitleData } from "../../ui/Title/types";
-import { ImageData } from "../../ui/Image/types";
+import { TitleData } from '../../ui/Title/types';
+import { ImageData } from '../../ui/Image/types';
 
 export type WarrantyData = {
   title: TitleData;
