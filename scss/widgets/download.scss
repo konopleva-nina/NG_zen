@@ -31,14 +31,14 @@
     height: 44px;
   }
 
-  &__imag-block {
+  &__image-block {
     height: 72vw;
     border: $border-line var(--border-color-primery);
     border-radius: $border-radius;
     overflow: hidden;
   }
 
-  &__imag-block img {
+  &__image-block img {
     display: block;
     height: 100%;
     object-fit: cover;
@@ -65,7 +65,7 @@
       @include flex(row, $gap-small);
     }
 
-    &__imag-block {
+    &__image-block {
       width: 50vw;
       height: 78%;
     }
