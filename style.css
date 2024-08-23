@@ -146,19 +146,19 @@ img {
 }
 
 /*menu*/
-.menu {
+.nav {
   display: none;
   background: var(--bg-color-primery);
   transition: all 0.5s;
 }
-.menu.active {
+.nav.active {
   display: block;
   position: fixed;
   top: 51px;
   left: 0;
   right: 0;
 }
-.menu__item {
+.nav__item {
   font-size: 24px;
   padding: 24px 15px;
   color: var(--primary-color);
