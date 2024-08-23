@@ -1,6 +1,7 @@
 import { Title } from '../../ui/Title/Title.js';
 import { Image } from '../../ui/Image/Image.js';
 import { Link } from '../../ui/Link/Link.js';
+
 /**
  * @typedef {import('./types').DownloadData} DownloadData
  */
@@ -23,7 +24,7 @@ export const Download = (data) => {
             ${links.map((link) => Link(link, 'download__link')).join('')}
           </div>
         </div>
-        <div class="download__imag-block">
+        <div class="download__image-block">
           ${Image(image)}
         </div>
       </div>
