@@ -146,19 +146,19 @@ img {
 }
 
 /*menu*/
-.menu {
+.nav {
   display: none;
   background: var(--bg-color-primery);
   transition: all 0.5s;
 }
-.menu.active {
+.nav.active {
   display: block;
   position: fixed;
   top: 51px;
   left: 0;
   right: 0;
 }
-.menu__item {
+.nav__item {
   font-size: 24px;
   padding: 24px 15px;
   color: var(--primary-color);
@@ -331,7 +331,7 @@ img {
   height: 100%;
   fill: currentColor;
 }
-.header__options {
+.header__actions {
   margin-left: auto;
   display: flex;
   align-items: center;
@@ -372,7 +372,7 @@ img {
   .header__wrapper {
     padding: 0 40px 0 30px;
   }
-  .header__options {
+  .header__actions {
     gap: 30px;
   }
 }
