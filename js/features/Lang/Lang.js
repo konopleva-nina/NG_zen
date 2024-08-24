@@ -1,4 +1,4 @@
-import { IconSelectArrow } from '../../ui/Icons/IconSelectArrow/IconSelectArrow.js';
+import { IconArrowDown } from '../../ui/Icons/IconArrowDown/IconArrowDown.js';
 
 /**
  * @typedef {import('./types').LangData} LangData
@@ -11,7 +11,7 @@ import { IconSelectArrow } from '../../ui/Icons/IconSelectArrow/IconSelectArrow.
  */
 
 export const Lang = (langList) => `
-  ${IconSelectArrow()}
+  ${IconArrowDown()}
   <select id="lang">
     ${langList.map((langItem) => `
       <option value="${langItem.key}">
