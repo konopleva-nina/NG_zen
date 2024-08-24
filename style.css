@@ -331,7 +331,7 @@ img {
   height: 100%;
   fill: currentColor;
 }
-.header__options {
+.header__actions {
   margin-left: auto;
   display: flex;
   align-items: center;
@@ -372,7 +372,7 @@ img {
   .header__wrapper {
     padding: 0 40px 0 30px;
   }
-  .header__options {
+  .header__actions {
     gap: 30px;
   }
 }
