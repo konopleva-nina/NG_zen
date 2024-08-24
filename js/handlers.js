@@ -3,7 +3,7 @@ import { IconSun } from './ui/Icons/IconSun/IconSun.js';
 
 /**
  * @function handleThemeBtnClick
- * @description смена темы по кнопке луна/солнце
+ * @description changing theme using moon/sun button
  * @param {object} event
  */
 
@@ -27,7 +27,7 @@ export const handleThemeBtnClick = (event) => {
 
 /**
  * @function handleMenuBurgerBtnClick
- * @description открытие/закрытие меню бургер
+ * @description opening/closing burger menu
  */
 
 export const handleMenuBurgerBtnClick = () => {
@@ -39,7 +39,7 @@ export const handleMenuBurgerBtnClick = () => {
 
 /**
  * @function handleLogoBtnClick
- * @description скролл наверх страницы при нажатии на кнопку Лого
+ * @description clicking on the logo button will scroll the page up
  */
 
 export const handleLogoBtnClick = () => {
