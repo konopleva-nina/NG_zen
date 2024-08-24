@@ -25,4 +25,3 @@ export const Cashback = (data) => {
     </section>
   `;
 };
-
