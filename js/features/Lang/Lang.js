@@ -11,12 +11,14 @@ import { IconArrowDown } from '../../ui/Icons/IconArrowDown/IconArrowDown.js';
  */
 
 export const Lang = (langList) => `
-  ${IconArrowDown()}
-  <select id="lang">
-    ${langList.map((langItem) => `
-      <option value="${langItem.key}">
-        ${langItem.name}
-      </option>
-    `).join('')}
-  </select>
+  <label class="header__lang">
+    ${IconArrowDown()}
+    <select id="lang">
+      ${langList.map((langItem) => `
+        <option value="${langItem.key}">
+          ${langItem.name}
+        </option>
+      `).join('')}
+    </select>
+  </label>
 `;
