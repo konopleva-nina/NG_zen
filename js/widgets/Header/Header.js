@@ -24,9 +24,7 @@ export const Header = (data) => {
           ${Navigation(navigation)}
         </nav>
         <div class="header__actions">
-          <label class="header__lang">
-            ${Lang(langs)}
-          </label>
+          ${Lang(langs)}
           ${Theme()}
           ${Burger()}
         </div>
