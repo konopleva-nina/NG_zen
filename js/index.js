@@ -6,6 +6,7 @@ import { Care } from './widgets/Care/Care.js';
 import { handleLogoBtnClick } from './handlers.js';
 import { handleThemeBtnClick } from './handlers.js';
 import { handleMenuBurgerBtnClick } from './handlers.js';
+import { Footer } from './widgets/Footer/Footer.js';
 
 const $root = document.querySelector('#root');
 
@@ -13,6 +14,7 @@ $root?.insertAdjacentHTML('beforeend', Header(data.primaryInfo));
 $root?.insertAdjacentHTML('beforeend', Download(data.download));
 $root?.insertAdjacentHTML('beforeend', Warranty(data.warranty));
 $root?.insertAdjacentHTML('beforeend', Care(data.care));
+$root?.insertAdjacentHTML('beforeend', Footer(data.secondaryInfo));
 
 const $logoBtn = document.querySelector('#logo');
 const $themeBtn = document.querySelector('#theme');
