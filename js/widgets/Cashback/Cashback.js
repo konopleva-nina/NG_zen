@@ -19,7 +19,7 @@ export const Cashback = (data) => {
         <div class="cashback__text-block">
           ${Title(title, 'cashback__title')}
           ${texts.map((text) => `<p class="cashback__copy">${text}</p>`).join('')}
-          ${Button(buttonText, 'cashback__button')}
+          ${Button(buttonText, 'cashback__button', 'button', 'order-open')}
         </div>
       </div>
     </section>
