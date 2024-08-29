@@ -24,7 +24,7 @@ export const Modal = (data) => {
     buttonText,
   } = data;
   return `
-    <div class="modal active" id="modal">
+    <div class="modal" id="modal">
       <div class="modal__body">
         <button class="modal__close" id="close">
           ${IconClose()}
