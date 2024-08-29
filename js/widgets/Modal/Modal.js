@@ -15,7 +15,14 @@ import { Title } from '../../ui/Title/Title.js';
  */
 
 export const Modal = (data) => {
-  const { title, input, select, selectText, checkbox, buttonText } = data;
+  const {
+    title,
+    input,
+    select,
+    selectText,
+    checkbox,
+    buttonText,
+  } = data;
   return `
     <div class="modal active" id="modal">
       <div class="modal__body">
