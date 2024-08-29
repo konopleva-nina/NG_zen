@@ -6,13 +6,15 @@
  * @function Button
  * @param {ButtonData} data
  * @param {string} className
+ * @param {string} type
+ * @param {string} id
  * @return {string}
  */
 
-export const Button = (data, className) => `
+export const Button = (data, className, type, id) => `
   <button class="${className}"
-    type="button"
-    id="order-open"
+    type="${type}"
+    id="${id}"
   >
     ${data}
   </button>
