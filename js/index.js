@@ -8,6 +8,7 @@ import { handleThemeBtnClick } from './handlers.js';
 import { handleMenuBurgerBtnClick } from './handlers.js';
 import { Cashback } from './widgets/Cashback/Cashback.js';
 import { Clients } from './widgets/Clients/Clients.js';
+import { Modal } from './widgets/Modal/Modal.js';
 
 const $root = document.querySelector('#root');
 
@@ -17,6 +18,7 @@ $root?.insertAdjacentHTML('beforeend', Warranty(data.warranty));
 $root?.insertAdjacentHTML('beforeend', Care(data.care));
 $root?.insertAdjacentHTML('beforeend', Cashback(data.cashback));
 $root?.insertAdjacentHTML('beforeend', Clients(data.clients));
+$root?.insertAdjacentHTML('beforeend', Modal(data.modal));
 
 
 const $logoBtn = document.querySelector('#logo');
