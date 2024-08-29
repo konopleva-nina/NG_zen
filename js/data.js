@@ -305,7 +305,10 @@ export const data = {
     },
   },
   modal: {
-    title: 'Order a consultation',
+    title: {
+      content: 'Order a consultation',
+      priority: 3,
+    },
     input: [
       {
         type: 'text',
@@ -324,6 +327,7 @@ export const data = {
     select: [
       {
         value: '',
+        optionText: '',
       },
       {
         value: 'telegram',
@@ -336,9 +340,9 @@ export const data = {
     ],
     selectText: 'Connection',
     checkbox: {
-      href: 'https://example.com/policy',
+      url: 'https://example.com/policy',
       text: 'Privacy policy',
     },
-    btnSubmitText: 'Submit',
+    buttonText: 'Submit',
   },
 };
