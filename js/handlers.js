@@ -45,3 +45,21 @@ export const handleMenuBurgerBtnClick = () => {
 export const handleLogoBtnClick = () => {
   window.scroll(0, 0);
 };
+
+/**
+ * @function handleOrderOpenBtnClick
+ */
+
+export const handleOrderOpenBtnClick = () => {
+  const $modal = document.querySelector('#modal');
+  $modal.classList.add('active');
+};
+
+/**
+ * @function handleCloseModalBtnClick
+ */
+
+export const handleCloseModalBtnClick = () => {
+  const $modal = document.querySelector('#modal');
+  $modal.classList.remove('active');
+};
