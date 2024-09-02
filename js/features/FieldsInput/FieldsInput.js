@@ -11,7 +11,7 @@
  * @returns {string}
  */
 
-export const Form = (input, select, selectText) => `
+export const FieldsInput = (input, select, selectText) => `
   ${input.map((inputItem) => `
     <label class="form__field">
       <input type="${inputItem.type}"
