@@ -47,12 +47,12 @@
     bottom: 8px;
   }
 
-  &__checkbox {
+  .checkbox {
     display: flex;
     gap: 5px;
   }
 
-  &__checkbox input::before {
+  .checkbox input::before {
     content: '';
     display: block;
     width: 12px;
@@ -61,13 +61,13 @@
     border-radius: 3px;
   }
 
-  &__checkbox input:checked::before {
+  .checkbox input:checked::before {
     background-image: url(../assets/icons/check.svg);
     background-position: center;
     background-size: 100%;
   }
 
-  &__checkbox a {
+  .checkbox a {
     display: flex;
     align-items: center;
     font-size: 14px;
