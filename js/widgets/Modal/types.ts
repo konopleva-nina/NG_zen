@@ -1,6 +1,6 @@
 import { TitleData } from '../../ui/Title/types';
-import { InputData } from '../../features/Form/types';
-import { SelectData } from '../../features/Form/types';
+import { InputData } from '../../features/FieldsInput/types';
+import { SelectData } from '../../features/FieldsInput/types';
 import { CheckBoxData } from '../../ui/Checkbox/types';
 
 export type ModalData = {
