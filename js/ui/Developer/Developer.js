@@ -10,7 +10,7 @@
 
 export const Developer = (data) => `
   <div class="footer__dev">
-    <a class="footer__dev" href="${data.url}">
+    <a href="${data.url}">
       <img src="${data.content.data}"
         alt="developer"
       />
