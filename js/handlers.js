@@ -2,26 +2,42 @@ import { IconMoon } from './ui/Icons/IconMoon/IconMoon.js';
 import { IconSun } from './ui/Icons/IconSun/IconSun.js';
 
 /**
- * @function handleThemeBtnClick
- * @description changing theme using moon/sun button
- * @param {object} event
+ * @typedef {import('./widgets/Clients/types').Client} BrandFromAPI
  */
 
-export const handleThemeBtnClick = (event) => {
-  const $themeBtn = event.currentTarget;
-  const theme = $themeBtn.dataset.theme;
+/**
+ * @function onThemeBtnClick
+ * @description In anonymous handler
+ * @param {Event} event
+ * @param {BrandFromAPI[]} brandsFromAPI
+ */
+
+export const onThemeBtnClick = (event, brandsFromAPI) => {
+  /** @type {NodeListOf<HTMLImageElement>} */
+  const $brandNodes = document.querySelectorAll('[data-id="brand"]');
+  const $themeBtn = /** @type {HTMLElement | null} */ (event.currentTarget);
   const $root = document.querySelector('#root');
-  if (theme === 'light') {
+  if (!$brandNodes || !$themeBtn || !$root) return;
+
+  const currentTheme = $themeBtn.dataset.theme;
+
+  if (currentTheme === 'light') {
     $themeBtn.dataset.theme = 'dark';
     $themeBtn.innerHTML = IconSun();
     $root.classList.add('dark');
     $root.classList.remove('light');
+    $brandNodes.forEach((brand, index) => {
+      brand.src = brandsFromAPI[index].logo.darkSource;
+    });
   };
-  if (theme === 'dark') {
+  if (currentTheme === 'dark') {
     $themeBtn.dataset.theme = 'light';
     $themeBtn.innerHTML = IconMoon();
     $root.classList.add('light');
     $root.classList.remove('dark');
+    $brandNodes.forEach((brand, index) => {
+      brand.src = brandsFromAPI[index].logo.lightSource;
+    });
   };
 };
 
@@ -33,8 +49,8 @@ export const handleThemeBtnClick = (event) => {
 export const handleMenuBurgerBtnClick = () => {
   const $nav = document.querySelector('#nav');
   const $burgerBtn = document.querySelector('#burger');
-  $nav.classList.toggle('active');
-  $burgerBtn.classList.toggle('active');
+  $nav?.classList.toggle('active');
+  $burgerBtn?.classList.toggle('active');
 };
 
 /**
@@ -44,4 +60,22 @@ export const handleMenuBurgerBtnClick = () => {
 
 export const handleLogoBtnClick = () => {
   window.scroll(0, 0);
+};
+
+/**
+ * @function handleOrderOpenBtnClick
+ */
+
+export const handleOrderOpenBtnClick = () => {
+  const $modal = document.querySelector('#modal');
+  $modal?.classList.add('active');
+};
+
+/**
+ * @function handleCloseModalBtnClick
+ */
+
+export const handleCloseModalBtnClick = () => {
+  const $modal = document.querySelector('#modal');
+  $modal?.classList.remove('active');
 };
