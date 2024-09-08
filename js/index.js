@@ -10,6 +10,7 @@ import { handleOrderOpenBtnClick } from './handlers.js';
 import { handleCloseModalBtnClick } from './handlers.js';
 import { Cashback } from './widgets/Cashback/Cashback.js';
 import { Clients } from './widgets/Clients/Clients.js';
+import { Footer } from './widgets/Footer/Footer.js';
 import { Modal } from './widgets/Modal/Modal.js';
 
 const $root = document.querySelector('#root');
@@ -20,6 +21,7 @@ $root?.insertAdjacentHTML('beforeend', Warranty(dataFromAPI.warranty));
 $root?.insertAdjacentHTML('beforeend', Care(dataFromAPI.care));
 $root?.insertAdjacentHTML('beforeend', Cashback(dataFromAPI.cashback));
 $root?.insertAdjacentHTML('beforeend', Clients(dataFromAPI.clients));
+$root?.insertAdjacentHTML('beforeend', Footer(dataFromAPI.secondaryInfo));
 $root?.insertAdjacentHTML('beforeend', Modal(dataFromAPI.modal));
 
 
