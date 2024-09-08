@@ -19,6 +19,7 @@ export const Clients = (data) => {
               <img
                 src="${brand.logo.lightSource}"
                 alt="${brand.name}"
+                data-id="brand"
               />
             </li>
           `).join('')}
