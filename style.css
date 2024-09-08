@@ -252,11 +252,11 @@ img {
   right: 5px;
   bottom: 8px;
 }
-.form__checkbox {
+.form .checkbox {
   display: flex;
   gap: 5px;
 }
-.form__checkbox input::before {
+.form .checkbox input::before {
   content: "";
   display: block;
   width: 12px;
@@ -264,12 +264,12 @@ img {
   border: 1px solid #00a1ff;
   border-radius: 3px;
 }
-.form__checkbox input:checked::before {
+.form .checkbox input:checked::before {
   background-image: url(../assets/icons/check.svg);
   background-position: center;
   background-size: 100%;
 }
-.form__checkbox a {
+.form .checkbox a {
   display: flex;
   align-items: center;
   font-size: 14px;

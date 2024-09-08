@@ -6,7 +6,10 @@
     "checkJs": true,
     "target": "ES2022",
     "module": "ES2022",
-    "lib": ["ES2022", "dom"],
+    "lib": [
+      "ES2022",
+      "dom"
+    ],
     "esModuleInterop": true,
     "isolatedModules": true,
     "moduleResolution": "node",
@@ -19,7 +22,9 @@
     "noImplicitAny": false,
     "noImplicitReturns": true,
     "resolveJsonModule": false,
-    "declaration": true
+    "declaration": true,
   },
-  "include": ["src", "config.ts"]
+  "include": [
+    "js",
+  ]
 }
