@@ -1,6 +1,7 @@
-import { LinksFooterData } from '../LinksFooter/types';
+import { LinkData } from '../Link/types';
+import { TitleData } from '../Title/types';
 
 export type ColumnData = {
-  name: string;
-  links: LinksFooterData[];
+  title: TitleData;
+  links: LinkData[];
 };
