@@ -1,6 +1,4 @@
-import { FieldsInput } from '../../features/FieldsInput/FieldsInput.js';
-import { Button } from '../../ui/Button/Button.js';
-import { Checkbox } from '../../ui/Checkbox/CheckBox.js';
+import { Form } from '../../features/Form/Form.js';
 import { IconClose } from '../../ui/Icons/IconClose/IconClose.js';
 import { Title } from '../../ui/Title/Title.js';
 
@@ -15,17 +13,13 @@ import { Title } from '../../ui/Title/Title.js';
  */
 
 export const Modal = (data) => `
-    <div class="modal" id="modal">
-      <div class="modal__body">
-        <button class="modal__close" id="close">
-          ${IconClose()}
-        </button>
-        ${Title(data.title, 'modal__title')}
-        <form class="form" id="order">
-          ${FieldsInput(data.input, data.select, data.selectText)}
-          ${Checkbox(data.checkbox)}
-          ${Button(data.buttonText, 'form__submit', 'submit', 'submit-form')}
-        </form>
-      </div>
+  <div class="modal" id="modal">
+    <div class="modal__body">
+      <button class="modal__close" id="close">
+        ${IconClose()}
+      </button>
+      ${Title(data.title, 'modal__title')}
+      ${Form(data)}
     </div>
-  `;
+  </div>
+`;
