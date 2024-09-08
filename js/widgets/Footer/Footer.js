@@ -22,7 +22,7 @@ export const Footer = (data) => {
         </div>
         <div class="footer__info">
           <div class="footer__logo">
-            <a class="footer__logo" href="https://example.com">
+            <a href="https://example.com">
               ${IconFooterLogo()}
             </a>
           </div>
