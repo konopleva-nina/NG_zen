@@ -3,7 +3,7 @@ type Source = {
   darkSource: string;
 };
 
-type Client = {
+export type Client = {
   name: string;
   logo: Source;
 };

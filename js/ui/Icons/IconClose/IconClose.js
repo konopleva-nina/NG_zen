@@ -1,0 +1,11 @@
+/**
+ * @function IconClose
+ * @returns {string}
+ */
+
+export const IconClose = () => `
+  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="31.8192" height="2.12128" transform="matrix(0.707107 -0.707106 0.707107 0.707106 0.686035 22.6855)" fill="white"/>
+    <rect width="31.8192" height="2.12128" transform="matrix(0.707107 0.707106 -0.707107 0.707106 2.18555 0.186401)" fill="white"/>
+  </svg>
+`;
