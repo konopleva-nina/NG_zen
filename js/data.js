@@ -43,12 +43,14 @@ export const data = {
     ],
     links: [
       {
-        name: 'apple',
+        type: 'image',
         url: 'https://apple.com',
+        content: 'apple',
       },
       {
-        name: 'google',
+        type: 'image',
         url: 'https://google.com',
+        content: 'google',
       },
     ],
     image: {
@@ -95,7 +97,7 @@ export const data = {
       'We gave it a thought and made cashback way more friendly.',
       'Up to 14% of what you spend using ZEN Mastercard ® will materialize on your account right after the purchase.',
     ],
-    buttonText: 'Order a consultation',
+    buttonText: 'Order a consultation!',
   },
   clients: {
     brands: [
@@ -160,130 +162,120 @@ export const data = {
   secondaryInfo: {
     columns: [
       {
-        name: 'Lern',
+        title: {
+          content: 'Lern',
+          priority: 3,
+        },
         links: [
           {
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Help center',
-            },
+            type: 'text',
+            content: 'Help center',
           },
           {
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Join ZEN team',
-            },
+            type: 'text',
+            content: 'Join ZEN team',
           },
           {
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Privacy Policy',
-            },
+            type: 'text',
+            content: 'Privacy Policy',
           },
           {
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Cookies',
-            },
+            type: 'text',
+            content: 'Cookies',
           },
           {
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Terms of use',
-            },
+            type: 'text',
+            content: 'Terms of use',
           },
         ],
       },
       {
-        name: 'Discover',
+        title: {
+          content: 'Discover',
+          priority: 3,
+        },
         links: [
           {
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'For developers',
-            },
+            type: 'text',
+            content: 'For developers',
           },
           {
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Apple Pay',
-            },
+            type: 'text',
+            content: 'Apple Pay',
           },
           {
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Google Pay',
-            },
+            type: 'text',
+            content: 'Google Pay',
           },
         ],
       },
       {
-        name: 'Offer',
+        title: {
+          content: 'Offer',
+          priority: 3,
+        },
         links: [
           {
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Business',
-            },
+            type: 'text',
+            content: 'Business',
           },
           {
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Personal',
-            },
+            type: 'text',
+            content: 'Personal',
           },
         ],
       },
       {
-        name: 'Language',
+        title: {
+          content: 'Language',
+          priority: 3,
+        },
         links: [
           {
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'English',
-            },
+            type: 'text',
+            content: 'English',
           },
           {
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Polish',
-            },
+            type: 'text',
+            content: 'Polish',
           },
         ],
       },
       {
-        name: 'Follow us',
+        title: {
+          content: 'Follow us',
+          priority: 3,
+        },
         links: [
           {
             url: 'https://example.com',
-            content: {
-              type: 'image',
-              data: './assets/icons/link.svg',
-            },
+            type: 'image',
+            content: 'ln',
           },
         ],
       },
       {
-        name: 'Contact',
+        title: {
+          content: 'Contact',
+          priority: 3,
+        },
         links: [
           {
             url: 'mailto:hello@zen.com',
-            content: {
-              type: 'text',
-              data: 'hello@zen.com',
-            },
+            type: 'text',
+            content: 'hello@zen.com',
           },
         ],
       },
@@ -305,17 +297,23 @@ export const data = {
     },
   },
   modal: {
-    title: 'Order a consultation',
+    title: {
+      content: 'Order a consultation',
+      priority: 3,
+    },
     input: [
       {
+        id: 'name',
         type: 'text',
         placeholder: 'Name',
       },
       {
+        id: 'tel',
         type: 'tel',
         placeholder: 'Tel.',
       },
       {
+        id: 'email',
         type: 'email',
         placeholder: 'E-mail',
       },
@@ -324,6 +322,7 @@ export const data = {
     select: [
       {
         value: '',
+        optionText: '',
       },
       {
         value: 'telegram',
@@ -336,9 +335,9 @@ export const data = {
     ],
     selectText: 'Connection',
     checkbox: {
-      href: 'https://example.com/policy',
+      url: 'https://example.com/policy',
       text: 'Privacy policy',
     },
-    btnSubmitText: 'Submit',
+    buttonText: 'Submit',
   },
 };
