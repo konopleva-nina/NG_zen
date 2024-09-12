@@ -79,3 +79,40 @@ export const handleCloseModalBtnClick = () => {
   const $modal = document.querySelector('#modal');
   $modal?.classList.remove('active');
 };
+
+const langSelectSection = (selectedValue, titleClass, copyClass, sectionRus, sectionEng) => {
+  const titleSection = document.querySelector(titleClass);
+  const copySection = document.querySelectorAll(copyClass);
+  if (selectedValue === 'ru') {
+    titleSection.textContent = '';
+    titleSection.textContent = sectionRus.title.content;
+    copySection.forEach((copy, index) => {
+      copy.textContent = '';
+      copy.textContent = sectionRus.texts[index];
+    });
+  };
+  if (selectedValue === 'en') {
+    titleSection.textContent = '';
+    titleSection.textContent = sectionEng.title.content;
+    copySection.forEach((copy, index) => {
+      copy.textContent = '';
+      copy.textContent = sectionEng.texts[index];
+    });
+  };
+};
+
+
+/**
+ * @function onLangSelectChange
+ * @param {Event} event
+ */
+
+export const onLangSelectChange = (event, dataRus, dataEng) => {
+  const selectedValue = event.target.value;
+  langSelectSection(selectedValue, '.download__title', '.download__text', dataRus.download, dataEng.download);
+  langSelectSection(selectedValue, '.warranty__title', '.warranty__copy', dataRus.warranty, dataEng.warranty);
+  langSelectSection(selectedValue, '.care__title', '.care__copy', dataRus.care, dataEng.care);
+  langSelectSection(selectedValue, '.cashback__title', '.cashback__copy', dataRus.cashback, dataEng.cashback);
+  langSelectSection(selectedValue, '', '.footer__copy', dataRus.secondaryInfo, dataEng.secondaryInfo);
+
+};

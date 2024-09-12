@@ -1,0 +1,9 @@
+export { IconLogo } from './IconLogo/index.js';
+export { IconFooterLogo } from './IconFooterLogo/index.js';
+export { IconApple } from './IconApple/index.js';
+export { IconGoogle } from './IconGoogle/index.js';
+export { IconLinkedin } from './IconLinkedin/index.js';
+export { IconArrowDown } from './IconArrowDown/index.js';
+export { IconClose } from './IconClose/index.js';
+export { IconMoon } from './IconMoon/index.js';
+export { IconSun } from './IconSun/index.js';

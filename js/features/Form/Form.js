@@ -1,7 +1,7 @@
-import { Select } from '../Select/Select.js';
-import { Input } from '../Input/Input.js';
-import { Checkbox } from '../../ui/Checkbox/CheckBox.js';
-import { Button } from '../../ui/Button/Button.js';
+import { Select } from '../Select/index.js';
+import { Input } from '../Input/index.js';
+import { Checkbox } from '../../ui/index.js';
+import { Button } from '../../ui/index.js';
 /**
  * @typedef {import('../../widgets/Modal/types').ModalData} ModalData
  */

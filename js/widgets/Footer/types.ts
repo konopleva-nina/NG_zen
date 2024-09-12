@@ -1,5 +1,5 @@
 import { ColumnData } from '../../ui/Column/types';
-import { DeveloperData } from '../../ui/Developer/types';
+import { DeveloperData } from '../../features/Developer/types';
 
 export type FooterData = {
   columns: ColumnData[];

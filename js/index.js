@@ -1,17 +1,19 @@
 import { data as dataFromAPI } from './data.js';
-import { Header } from './widgets/Header/Header.js';
-import { Download } from './widgets/Download/Download.js';
-import { Warranty } from './widgets/Warranty/Warranty.js';
-import { Care } from './widgets/Care/Care.js';
+import { dataRus } from './dataRus.js';
+import { Header } from './widgets/Header/index.js';
+import { Download } from './widgets/Download/index.js';
+import { Warranty } from './widgets/Warranty/index.js';
+import { Care } from './widgets/Care/index.js';
 import { handleLogoBtnClick } from './handlers.js';
 import { onThemeBtnClick } from './handlers.js';
 import { handleMenuBurgerBtnClick } from './handlers.js';
 import { handleOrderOpenBtnClick } from './handlers.js';
 import { handleCloseModalBtnClick } from './handlers.js';
-import { Cashback } from './widgets/Cashback/Cashback.js';
-import { Clients } from './widgets/Clients/Clients.js';
-import { Footer } from './widgets/Footer/Footer.js';
-import { Modal } from './widgets/Modal/Modal.js';
+import { onLangSelectChange } from './handlers.js';
+import { Cashback } from './widgets/Cashback/index.js';
+import { Clients } from './widgets/Clients/index.js';
+import { Footer } from './widgets/Footer/index.js';
+import { Modal } from './widgets/Modal/index.js';
 
 const $root = document.querySelector('#root');
 
@@ -36,3 +38,5 @@ $themeBtn?.addEventListener('click', (event) => onThemeBtnClick(event, dataFromA
 $burgerBtn?.addEventListener('click', handleMenuBurgerBtnClick);
 $orderOpenBtn?.addEventListener('click', handleOrderOpenBtnClick);
 $closeModalBtn?.addEventListener('click', handleCloseModalBtnClick);
+const $langSelect = document.querySelector('#lang');
+$langSelect?.addEventListener('change', (event) => onLangSelectChange(event, dataRus, dataFromAPI));
