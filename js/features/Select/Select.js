@@ -16,7 +16,7 @@ export const Select = (select, selectText) => {
       <select id="connection">
         ${select.map((selectItem) => `
           <option value="${selectItem.value}">
-            ${selectItem.optionText}
+            ${selectItem.label}
           </option>
         `).join('')}
       </select>
