@@ -1,10 +1,9 @@
-import { dataEn } from './api/dataEn.js';
-import { dataRu } from './api/dataRu.js';
 import { App } from './app/App.js';
 import { IconMoon } from './ui/icons/index.js';
 import { IconSun } from './ui/icons/index.js';
 import { toggleNavigation } from './utils/index.js';
 import { addHandlers } from './addHandlers.js';
+import { DATA_URL } from './index.js';
 
 /**
  * @typedef {import('./types').Client} BrandFromAPI
@@ -122,9 +121,13 @@ export const handletLangChange = (event) => {
 
   if (!$root) return;
 
-  const data = selectedLang === 'ru' ? dataRu : dataEn;
-  $root.innerHTML = App(data);
-  addHandlers(data);
+  fetch(DATA_URL)
+    .then((responce) => responce.json())
+    .then((responceData) => {
+      $root.innerHTML = App(responceData[selectedLang]);
+      addHandlers(responceData[selectedLang]);
+    })
+    .catch((error) => console.error('Не удалось поменять язык', error));
 };
 
 /**
