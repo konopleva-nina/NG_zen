@@ -3,7 +3,7 @@ import { IconMoon } from './ui/icons/index.js';
 import { IconSun } from './ui/icons/index.js';
 import { toggleNavigation } from './utils/index.js';
 import { addHandlers } from './addHandlers.js';
-import { DATA_URL } from './index.js';
+import { API_URL } from './config.js';
 
 /**
  * @typedef {import('./types').Client} BrandFromAPI
@@ -121,13 +121,13 @@ export const handletLangChange = (event) => {
 
   if (!$root) return;
 
-  fetch(DATA_URL)
-    .then((responce) => responce.json())
-    .then((responceData) => {
-      $root.innerHTML = App(responceData[selectedLang]);
-      addHandlers(responceData[selectedLang]);
+  fetch(API_URL)
+    .then((response) => response.json())
+    .then((responseData) => {
+      $root.innerHTML = App(responseData[selectedLang]);
+      addHandlers(responseData[selectedLang]);
     })
-    .catch((error) => console.error('Не удалось поменять язык', error));
+    .catch((error) => console.error(error));
 };
 
 /**
