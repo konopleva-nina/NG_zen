@@ -13,11 +13,11 @@ import { Button } from '../../ui/index.js';
  */
 
 export const Form = (data) => {
-  const { input, select, selectText, checkbox, buttonText } = data;
+  const { inputs, connections, selectText, checkbox, buttonText } = data;
   return `
     <form class="form" id="order">
-      ${input.map((inputItem) => Input(inputItem)).join('')}
-      ${Select(select, selectText)}
+      ${inputs.map((inputItem) => Input(inputItem)).join('')}
+      ${Select(connections, selectText)}
       ${Checkbox(checkbox)}
       ${Button(buttonText, 'form__submit', 'submit', 'submit-form')}
     </form>
