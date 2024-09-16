@@ -1,4 +1,5 @@
-import { handleLogoClick, handletLangChange } from './handlers.js';
+import { handleLogoClick } from './handlers.js';
+import { handletLangChange } from './handlers.js';
 import { onThemeClick } from './handlers.js';
 import { handleNavLinkClick } from './handlers.js';
 import { handleOrderOpenClick } from './handlers.js';
