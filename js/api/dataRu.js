@@ -45,12 +45,12 @@ export const dataRu = {
       {
         type: 'image',
         url: 'https://apple.com',
-        content: 'apple',
+        name: 'apple',
       },
       {
         type: 'image',
         url: 'https://google.com',
-        content: 'google',
+        name: 'google',
       },
     ],
     image: {
@@ -170,27 +170,27 @@ export const dataRu = {
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Центр помощи',
+            name: 'Центр помощи',
           },
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Присоединяйтесь',
+            name: 'Присоединяйтесь',
           },
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Политика',
+            name: 'Политика',
           },
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Файлы cookie',
+            name: 'Файлы cookie',
           },
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Правила',
+            name: 'Правила',
           },
         ],
       },
@@ -203,17 +203,17 @@ export const dataRu = {
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Разработчикам',
+            name: 'Разработчикам',
           },
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Apple Pay',
+            name: 'Apple Pay',
           },
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Google Pay',
+            name: 'Google Pay',
           },
         ],
       },
@@ -226,12 +226,12 @@ export const dataRu = {
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Бизнес',
+            name: 'Бизнес',
           },
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Персональные',
+            name: 'Персональные',
           },
         ],
       },
@@ -244,12 +244,12 @@ export const dataRu = {
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Английский',
+            name: 'Английский',
           },
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Польский',
+            name: 'Польский',
           },
         ],
       },
@@ -262,7 +262,7 @@ export const dataRu = {
           {
             url: 'https://example.com',
             type: 'image',
-            content: 'ln',
+            name: 'ln',
           },
         ],
       },
@@ -275,7 +275,7 @@ export const dataRu = {
           {
             url: 'mailto:hello@zen.com',
             type: 'text',
-            content: 'hello@zen.com',
+            name: 'hello@zen.com',
           },
         ],
       },
@@ -290,10 +290,8 @@ export const dataRu = {
     ],
     developer: {
       url: 'https://example.com',
-      content: {
-        type: 'image',
-        data: './assets/icons/developer.svg',
-      },
+      type: 'image',
+      name: 'developer',
     },
   },
   modal: {
@@ -301,7 +299,7 @@ export const dataRu = {
       content: 'Закажите консультацию',
       priority: 3,
     },
-    input: [
+    inputs: [
       {
         id: 'name',
         type: 'text',
@@ -319,18 +317,18 @@ export const dataRu = {
       },
     ],
 
-    select: [
+    connections: [
       {
         value: '',
-        optionText: '',
+        label: '',
       },
       {
         value: 'telegram',
-        optionText: 'Telegram',
+        label: 'Telegram',
       },
       {
         value: 'whatsapp',
-        optionText: 'WhatsApp',
+        label: 'WhatsApp',
       },
     ],
     selectText: 'Способ связи',

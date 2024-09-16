@@ -45,12 +45,12 @@ export const dataEn = {
       {
         type: 'image',
         url: 'https://apple.com',
-        content: 'apple',
+        name: 'apple',
       },
       {
         type: 'image',
         url: 'https://google.com',
-        content: 'google',
+        name: 'google',
       },
     ],
     image: {
@@ -170,27 +170,27 @@ export const dataEn = {
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Help center',
+            name: 'Help center',
           },
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Join ZEN team',
+            name: 'Join ZEN team',
           },
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Privacy Policy',
+            name: 'Privacy Policy',
           },
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Cookies',
+            name: 'Cookies',
           },
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Terms of use',
+            name: 'Terms of use',
           },
         ],
       },
@@ -203,17 +203,17 @@ export const dataEn = {
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'For developers',
+            name: 'For developers',
           },
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Apple Pay',
+            name: 'Apple Pay',
           },
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Google Pay',
+            name: 'Google Pay',
           },
         ],
       },
@@ -226,12 +226,12 @@ export const dataEn = {
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Business',
+            name: 'Business',
           },
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Personal',
+            name: 'Personal',
           },
         ],
       },
@@ -244,12 +244,12 @@ export const dataEn = {
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'English',
+            name: 'English',
           },
           {
             url: 'https://example.com',
             type: 'text',
-            content: 'Polish',
+            name: 'Polish',
           },
         ],
       },
@@ -262,7 +262,7 @@ export const dataEn = {
           {
             url: 'https://example.com',
             type: 'image',
-            content: 'ln',
+            name: 'ln',
           },
         ],
       },
@@ -275,7 +275,7 @@ export const dataEn = {
           {
             url: 'mailto:hello@zen.com',
             type: 'text',
-            content: 'hello@zen.com',
+            name: 'hello@zen.com',
           },
         ],
       },
@@ -290,10 +290,8 @@ export const dataEn = {
     ],
     developer: {
       url: 'https://example.com',
-      content: {
-        type: 'image',
-        data: './assets/icons/developer.svg',
-      },
+      type: 'image',
+      name: 'developer',
     },
   },
   modal: {
@@ -301,7 +299,7 @@ export const dataEn = {
       content: 'Order a consultation',
       priority: 3,
     },
-    input: [
+    inputs: [
       {
         id: 'name',
         type: 'text',
@@ -319,18 +317,18 @@ export const dataEn = {
       },
     ],
 
-    select: [
+    connections: [
       {
         value: '',
-        optionText: '',
+        label: '',
       },
       {
         value: 'telegram',
-        optionText: 'Telegram',
+        label: 'Telegram',
       },
       {
         value: 'whatsapp',
-        optionText: 'WhatsApp',
+        label: 'WhatsApp',
       },
     ],
     selectText: 'Connection',
