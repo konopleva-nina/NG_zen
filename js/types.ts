@@ -10,7 +10,7 @@ export type TitleData = {
 export type LinkData = {
   url: string;
   type: string;
-  content: string;
+  name: string;
 };
 
 export type ImageData = {
@@ -105,20 +105,10 @@ export type ColumnData = {
   links: LinkData[];
 };
 
-type ContentDev = {
-  type: string;
-  data: string;
-};
-
-export type DeveloperData = {
-  url: string;
-  content: ContentDev;
-};
-
 export type FooterData = {
   columns: ColumnData[];
   texts: string[];
-  developer: DeveloperData;
+  developer: LinkData;
 };
 
 /**********************************************
@@ -132,7 +122,7 @@ export type CheckBoxData = {
 
 export type SelectData = {
   value: string;
-  optionText: string;
+  label: string;
 };
 
 export type InputData = {
@@ -143,8 +133,8 @@ export type InputData = {
 
 export type ModalData = {
   title: TitleData;
-  input: InputData[];
-  select: SelectData[];
+  inputs: InputData[];
+  connections: SelectData[];
   selectText: string;
   checkbox: CheckBoxData;
   buttonText: string;
