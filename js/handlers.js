@@ -1,8 +1,8 @@
 import { dataEn } from './api/dataEn.js';
 import { dataRu } from './api/dataRu.js';
 import { App } from './app/App.js';
-import { IconMoon } from './ui/Icons/index.js';
-import { IconSun } from './ui/Icons/index.js';
+import { IconMoon } from './ui/icons/index.js';
+import { IconSun } from './ui/icons/index.js';
 import { toggleNavigation } from './utils/index.js';
 import { addHandlers } from './addHandlers.js';
 
