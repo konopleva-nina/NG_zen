@@ -1,18 +1,23 @@
-import { IconMoon } from './ui/Icons/IconMoon/IconMoon.js';
-import { IconSun } from './ui/Icons/IconSun/IconSun.js';
+import { dataEn } from './api/dataEn.js';
+import { dataRu } from './api/dataRu.js';
+import { App } from './app/App.js';
+import { IconMoon } from './ui/Icons/index.js';
+import { IconSun } from './ui/Icons/index.js';
+import { toggleNavigation } from './utils/index.js';
+import { addHandlers } from './addHandlers.js';
 
 /**
- * @typedef {import('./widgets/Clients/types').Client} BrandFromAPI
+ * @typedef {import('./types').Client} BrandFromAPI
  */
 
 /**
- * @function onThemeBtnClick
+ * @function onThemeClick
  * @description In anonymous handler
  * @param {Event} event
  * @param {BrandFromAPI[]} brandsFromAPI
  */
 
-export const onThemeBtnClick = (event, brandsFromAPI) => {
+export const onThemeClick = (event, brandsFromAPI) => {
   /** @type {NodeListOf<HTMLImageElement>} */
   const $brandNodes = document.querySelectorAll('[data-id="brand"]');
   const $themeBtn = /** @type {HTMLElement | null} */ (event.currentTarget);
@@ -42,55 +47,98 @@ export const onThemeBtnClick = (event, brandsFromAPI) => {
 };
 
 /**
- * @function handleMenuBurgerBtnClick
+ * @function handleNavLinkClick
  * @description opening/closing burger menu
+ * @param {Event} event
+ * @returns {void}
  */
 
-export const handleMenuBurgerBtnClick = () => {
-  const $nav = document.querySelector('#nav');
-  const $burgerBtn = document.querySelector('#burger');
-  $nav?.classList.toggle('active');
-  $burgerBtn?.classList.toggle('active');
+export const handleNavLinkClick = (event) => {
+  event.preventDefault();
+  const targetId = /** @type {HTMLAnchorElement} */ (event.target).hash;
+  if (!targetId) return;
+  /** @type {HTMLElement | null} */
+  const $targetElement = document.querySelector(targetId);
+  /** @type {HTMLElement | null} */
+  const $header = document.querySelector('header');
+  const headerHeight = $header?.offsetHeight || 0;
+
+  if (!$targetElement) return;
+
+  const targetPosition =
+    $targetElement.getBoundingClientRect().top -
+    headerHeight;
+
+  window.scrollBy({
+    top: targetPosition,
+    behavior: 'smooth',
+  });
+
+  toggleNavigation();
 };
 
 /**
- * @function handleLogoBtnClick
+ * @function handleLogoClick
  * @description clicking on the logo button will scroll the page up
+ * @returns {void}
  */
 
-export const handleLogoBtnClick = () => {
-  window.scroll(0, 0);
+export const handleLogoClick = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
 };
 
 /**
- * @function handleOrderOpenBtnClick
+ * @function handleOrderOpenClick
+ * @returns {void}
  */
 
-export const handleOrderOpenBtnClick = () => {
+export const handleOrderOpenClick = () => {
   const $modal = document.querySelector('#modal');
   $modal?.classList.add('active');
 };
 
 /**
- * @function handleCloseModalBtnClick
+ * @function handleOrderCloseClick
+ * @returns {void}
  */
 
-export const handleCloseModalBtnClick = () => {
+export const handleOrderCloseClick = () => {
   const $modal = document.querySelector('#modal');
   $modal?.classList.remove('active');
 };
 
 /**
- * @function onLangSelectChange
+ * @function handletLangChange
+ * @param { Event } event
+ */
+
+export const handletLangChange = (event) => {
+  const selectedLang =  /** @type {HTMLSelectElement} */ (event?.target).value;
+  /** @type { HTMLElement | null } */
+  const $root = document.querySelector('#root');
+
+  if (!$root) return;
+
+  const data = selectedLang === 'ru' ? dataRu : dataEn;
+  $root.innerHTML = App(data);
+  addHandlers(data);
+};
+
+/**
+ * @function handleConnectionNodeChange
  * @param {Event} event
  */
 
-export const onLangSelectChange = (event, dataRus, dataEng) => {
-  const selectedValue = event.target.value;
-  langSelectSection(selectedValue, '.download__title', '.download__text', dataRus.download, dataEng.download);
-  langSelectSection(selectedValue, '.warranty__title', '.warranty__copy', dataRus.warranty, dataEng.warranty);
-  langSelectSection(selectedValue, '.care__title', '.care__copy', dataRus.care, dataEng.care);
-  langSelectSection(selectedValue, '.cashback__title', '.cashback__copy', dataRus.cashback, dataEng.cashback);
-  langSelectSection(selectedValue, '', '.footer__copy', dataRus.secondaryInfo, dataEng.secondaryInfo);
+export const handleConnectionNodeChange = (event) => {
+  const parentNode = /** @type {HTMLElement} */ (event?.target).parentElement;
+  const spanNode = parentNode?.querySelector('span');
+  const selectItem = /** @type {HTMLSelectElement} */ (event?.target).value;
 
+  if (!spanNode) return;
+
+  if (selectItem) spanNode.style.display = 'none';
+  else spanNode.style.display = 'block';
 };

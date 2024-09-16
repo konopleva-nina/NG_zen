@@ -1,5 +1,5 @@
 import { Column } from '../../ui/index.js';
-import { Developer } from '../../features/index.js';
+import { Link } from '../../ui/index.js';
 import { IconFooterLogo } from '../../ui/Icons/index.js';
 
 /**
@@ -27,7 +27,7 @@ export const Footer = (data) => {
             </a>
           </div>
           ${texts.map((text) => `<p class="footer__copy">${text}</p>`).join('')}
-          ${Developer(developer)}
+          ${Link(developer)}
         </div>
       </div>
     </footer>
