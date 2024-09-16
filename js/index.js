@@ -4,6 +4,6 @@ import { addHandlers } from './addHandlers.js';
 
 const $root = document.querySelector('#root');
 
-$root?.insertAdjacentHTML('beforeend', App(dataFromAPI));
+if ($root) $root.innerHTML = App(dataFromAPI);
 
 addHandlers(dataFromAPI);
