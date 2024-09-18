@@ -3,7 +3,7 @@ import { IconMoon } from './ui/icons/index.js';
 import { IconSun } from './ui/icons/index.js';
 import { toggleNavigation } from './utils/index.js';
 import { addHandlers } from './addHandlers.js';
-import { API_URL } from './config.js';
+import { API_BASE_URL } from './config.js';
 
 /**
  * @typedef {import('./types').Client} BrandFromAPI
@@ -121,7 +121,7 @@ export const handletLangChange = (event) => {
 
   if (!$root) return;
 
-  fetch(API_URL)
+  fetch(`${API_BASE_URL}.json`)
     .then((response) => response.json())
     .then((responseData) => {
       $root.innerHTML = App(responseData[selectedLang]);

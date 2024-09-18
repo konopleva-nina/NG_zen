@@ -1,1 +1,1 @@
-export const API_URL = 'https://ng-free-zen-knop-default-rtdb.firebaseio.com/.json';
+export const API_BASE_URL = 'https://ng-free-zen-knop-default-rtdb.firebaseio.com/';
