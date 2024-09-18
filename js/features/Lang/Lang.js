@@ -1,4 +1,4 @@
-import { IconArrowDown } from '../../ui/Icons/index.js';
+import { IconArrowDown } from '../../ui/icons/index.js';
 
 /**
  * @typedef {import('./types').LangData} LangData

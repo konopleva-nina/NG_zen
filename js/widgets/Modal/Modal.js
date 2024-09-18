@@ -1,5 +1,5 @@
 import { Form } from '../../features/index.js';
-import { IconClose } from '../../ui/Icons/index.js';
+import { IconClose } from '../../ui/icons/index.js';
 import { Title } from '../../ui/index.js';
 
 /**
