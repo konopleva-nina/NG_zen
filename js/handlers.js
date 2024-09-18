@@ -1,9 +1,7 @@
-import { App } from './app/App.js';
 import { IconMoon } from './ui/icons/index.js';
 import { IconSun } from './ui/icons/index.js';
 import { toggleNavigation } from './utils/index.js';
-import { addHandlers } from './addHandlers.js';
-import { API_BASE_URL } from './config.js';
+import { updateDataFromLocalStorage } from './utils/index.js';
 
 /**
  * @typedef {import('./types').Client} BrandFromAPI
@@ -23,22 +21,22 @@ export const onThemeClick = (event, brandsFromAPI) => {
   const $root = document.querySelector('#root');
   if (!$brandNodes || !$themeBtn || !$root) return;
 
-  const currentTheme = $themeBtn.dataset.theme;
+  const currentTheme = localStorage.getItem('currentTheme');
 
   if (currentTheme === 'light') {
-    $themeBtn.dataset.theme = 'dark';
     $themeBtn.innerHTML = IconSun();
-    $root.classList.add('dark');
     $root.classList.remove('light');
+    $root.classList.add('dark');
+    localStorage.setItem('currentTheme', 'dark');
     $brandNodes.forEach((brand, index) => {
       brand.src = brandsFromAPI[index].logo.darkSource;
     });
   };
   if (currentTheme === 'dark') {
-    $themeBtn.dataset.theme = 'light';
     $themeBtn.innerHTML = IconMoon();
-    $root.classList.add('light');
     $root.classList.remove('dark');
+    $root.classList.add('light');
+    localStorage.setItem('currentTheme', 'light');
     $brandNodes.forEach((brand, index) => {
       brand.src = brandsFromAPI[index].logo.lightSource;
     });
@@ -116,18 +114,13 @@ export const handleOrderCloseClick = () => {
 
 export const handletLangChange = (event) => {
   const selectedLang =  /** @type {HTMLSelectElement} */ (event?.target).value;
+  localStorage.setItem('currentLang', selectedLang);
   /** @type { HTMLElement | null } */
   const $root = document.querySelector('#root');
 
   if (!$root) return;
 
-  fetch(`${API_BASE_URL}.json`)
-    .then((response) => response.json())
-    .then((responseData) => {
-      $root.innerHTML = App(responseData[selectedLang]);
-      addHandlers(responseData[selectedLang]);
-    })
-    .catch((error) => console.error(error));
+  updateDataFromLocalStorage(selectedLang);
 };
 
 /**
