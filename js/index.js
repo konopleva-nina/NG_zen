@@ -1,13 +1,12 @@
-import { App } from './app/App.js';
-import { addHandlers } from './addHandlers.js';
-import { API_BASE_URL } from './config.js';
+import { updateDataFromLocalStorage } from './utils/index.js';
 
 const $root = document.querySelector('#root');
 
-fetch(`${API_BASE_URL}en/.json`)
-  .then((response) => response.json())
-  .then((responseData) => {
-    if ($root) $root.innerHTML = App(responseData);
-    addHandlers(responseData);
-  })
-  .catch((error) => console.error(error));
+const currentLang = localStorage.getItem('currentLang') ?? 'en';
+const currentTheme = localStorage.getItem('currentTheme') ?? 'light';
+localStorage.setItem('currentLang', currentLang);
+localStorage.setItem('currentTheme', currentTheme);
+
+$root?.classList.add(currentTheme);
+
+updateDataFromLocalStorage(currentLang);
