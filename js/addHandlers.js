@@ -8,12 +8,12 @@ import { toggleNavigation } from './utils/index.js';
 import { handleConnectionNodeChange } from './handlers.js';
 
 /**
- * @typedef {import('./types').AppData} AppData
+ * @typedef {import('./types').AppDataFromAPI} AppDataFromAPI
  */
 
 /**
  * @function addHandlers
- * @param {AppData} dataFromAPI
+ * @param {AppDataFromAPI} dataFromAPI
  * @returns {void}
  */
 
