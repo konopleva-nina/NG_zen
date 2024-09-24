@@ -1,19 +1,26 @@
-import { API_BASE_URL } from '../../config.js';
 import { App } from '../../app/App.js';
 import { addHandlers } from '../../addHandlers.js';
+import { getData } from '../index.js';
+import { Preloader } from '../../ui/index.js';
 
 /**
- * @function updateDataFromLocalStorage
+ * @function renderApp
  * @param {string} currentLang
  */
 
-export const updateDataFromLocalStorage = async (currentLang) => {
-  const response = await fetch(`${API_BASE_URL}/${currentLang}/.json`);
-  const responseData = await response.json();
-
+export const renderApp = async (currentLang) => {
   const $root = document.querySelector('#root');
+  if (!$root) return;
 
-  if ($root) $root.innerHTML = App(responseData);
+  $root.innerHTML = Preloader();
+
+  const responseData = await getData(currentLang);
+  if (!responseData) {
+    $root.innerHTML = '<p>Что-то пошло не так. Повторите попытку позже.</p>';
+    return;
+  }
+
+  $root.innerHTML = App(responseData);
   addHandlers(responseData);
 };
 
