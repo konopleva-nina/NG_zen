@@ -25,6 +25,6 @@
     "declaration": true,
   },
   "include": [
-    "js", "js/types.ts",
+    "js", "js/types.ts", "_temp/css/api",
   ]
 }

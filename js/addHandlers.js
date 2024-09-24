@@ -27,6 +27,7 @@ export const addHandlers = (dataFromAPI) => {
   const $lang = document.querySelector('#lang');
   const $connectionNode = document.querySelector('#connection');
 
+
   $logoBtn?.addEventListener('click', handleLogoClick);
   $themeBtn?.addEventListener('click', (event) => onThemeClick(event, dataFromAPI.clients.brands));
   $burgerBtn?.addEventListener('click', toggleNavigation);
