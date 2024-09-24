@@ -144,7 +144,7 @@ export type ModalData = {
   AppData
 **********************************************/
 
-export type AppData = {
+export type AppDataFromAPI = {
   primaryInfo: HeaderData;
   download: DownloadData;
   warranty: WarrantyData;
