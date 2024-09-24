@@ -1,4 +1,4 @@
-import { updateDataFromLocalStorage } from './utils/index.js';
+import { renderApp } from './utils/index.js';
 
 const $root = document.querySelector('#root');
 
@@ -9,4 +9,4 @@ localStorage.setItem('currentTheme', currentTheme);
 
 $root?.classList.add(currentTheme);
 
-updateDataFromLocalStorage(currentLang);
+renderApp(currentLang);
