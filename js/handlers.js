@@ -1,7 +1,7 @@
 import { IconMoon } from './ui/icons/index.js';
 import { IconSun } from './ui/icons/index.js';
 import { toggleNavigation } from './utils/index.js';
-import { updateDataFromLocalStorage } from './utils/index.js';
+import { renderApp } from './utils/index.js';
 
 /**
  * @typedef {import('./types').Client} BrandFromAPI
@@ -120,7 +120,7 @@ export const handletLangChange = (event) => {
 
   if (!$root) return;
 
-  updateDataFromLocalStorage(selectedLang);
+  renderApp(selectedLang);
 };
 
 /**
@@ -138,3 +138,4 @@ export const handleConnectionNodeChange = (event) => {
   if (selectItem) spanNode.style.display = 'none';
   else spanNode.style.display = 'block';
 };
+
