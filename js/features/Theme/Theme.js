@@ -11,7 +11,6 @@ export const Theme = () => {
   return `
     <button class="header__theme"
       id="theme"
-      data-theme="light"
     >
       ${currentTheme === 'light' ? IconMoon() : IconSun()}
     </button>
